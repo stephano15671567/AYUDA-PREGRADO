@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Ayuda</title>
+    <style>
+      body {
+  max-width: 100%;
+  margin: 0 auto;
+}
+       .carousel-control-prev,
+    .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  .carousel-container {
+    width: 100%;
+    max-width: calc(50% - 10px); /* 10px para el espacio entre contenedores */
+    overflow: hidden;
+}
+
+      .container3 {
+        display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    position: relative;
+    width: 100%;
+    }
+    .carousel-inner {
+      text-align: center; /* Ajuste para centrar la imagen en el carrusel */
+    width: 100%; /* Ajusta este valor según tus necesidades */
+    
+    padding: 0;}
+
+      #carouselExampleFade {
+        display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 81%;
+    float: right;
+
+    }
+#infoExamenModal4 .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  overflow-y: auto; 
+}
+
+#infoExamenModal4 .zoom-container {
+  display: block;
+  text-align: center;
+}
+
+#infoExamenModal4 .zoomable {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+    }
+   
+    [id^="faq"]:target::before {
+      content: '';
+      display: block;
+      height: 50vh;
+      margin-top: -50vh;
+      visibility: hidden;
+    }
+    .zoom-container {
+      display: flex;
+      overflow-y: auto;
+    }
+    .zoomed-image-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      pointer-events: none;
+    }
+    .zoomed-image {
+      max-width: 10%;
+      max-height: 97vh;
+      display: block;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    }
+    .zoomable {
+      width: 100%;
+      cursor: pointer;
+    }
+    #infoExamenModal3 .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+#infoExamenModal3 .zoom-container2 {
+  display: block;
+  text-align: center;
+}
+#infoExamenModal3 .zoomable2 {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+#infoExamenModal3 .zoomed-image-container2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  pointer-events: none;
+}
+#infoExamenModal3 .zoomed-image2 {
+  max-width: 100%;
+  max-height: 97vh;
+  display: block;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#infoExamenModal3 .zoomable2 {
+  width: 100%;
+  cursor: pointer;
+}
+#infoExamenModal5 .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+#infoExamenModal5 .zoom-container3 {
+    display: block;
+    text-align: center;
+}
+#infoExamenModal5 .zoomable3 {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+#infoExamenModal5 .zoomed-image-container3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+}
+#infoExamenModal5 .zoomed-image3 {
+    max-width: 100%;
+    max-height: 97vh;
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#infoExamenModal5 .zoomable3 {
+    width: 100%;
+    cursor: pointer;
+}
+#infoExamenModal6 .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+#infoExamenModal6 .zoom-container4 {
+    display: block;
+    text-align: center;
+}
+#infoExamenModal6 .zoomable4 {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+#infoExamenModal6 .zoom-container4 {
+    display: flex;
+    overflow-y: auto;
+}
+#infoExamenModal6 .zoomed-image-container4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+}
+#infoExamenModal6 .zoomed-image4 {
+    max-width: 100%;
+    max-height: 97vh;
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#infoExamenModal6 .zoomable4 {
+    width: 100%;
+    cursor: pointer;
+}    
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-contenido {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+        .spancito{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+        .module-item {
+          display: flex;
+          flex-direction: column; 
+        }
+        .module-title {
+          display: flex;
+          font-size: 18px;
+          align-items: center; 
+        }
+        .item {
+          display: flex;
+          flex-direction: column; 
+        }
+
+        .faq-q {
+          display: flex;
+          align-items: center; 
+          margin-right: 24px;
+        }
+        .faq-a {
+          
+          justify-content: left;
+          margin-left: 24px; 
+          margin-right: 24px;
+        }
+        .left-container {
+            float: left;
+            width: 55%;
+        }
+        .spacer {
+            margin-bottom: 20px; 
+        }
+        .right-container {
+            float: right;
+            width: 40%; 
+            border: 1px solid #e5e5e5;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            justify-content: center;
+            
+            max-width: 100%;
+   
+        }
+      
+        .img0 {
+            width: 200px; 
+            height: auto;
+            
+        }
+        .img2{
+       
+          margin-right: 10px;
+        }
+        .img3{
+          display:flex;
+          height: auto;
+          margin-right:30px;
+        }
+        .img4{
+          width: 50px;
+          height: auto;
+          margin:0 auto; 
+        }
+        .img1{
+          
+          display: inline-block;
+    max-width: 100%;
+
+        }
+        .botoncito3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+}
+        h5 {
+          text-align: left;
+        }
+        h3 {
+            color: #0f5c68      
+        }
+        h6 {
+            color: #0f5c68      
+        }
+        .h1r {
+            margin: 0; 
+            color: #0f5c68;
+            text-align: center;    
+        }
+        h1 {
+          text-align: center;
+            margin: 0; 
+            color: #0f5c68;    
+        } 
+        .botoncito {
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            margin: auto;
+            color: #0f5c68 ;
+            
+            background-color: #ffffff;
+            border: 1px solid#e5e5e5; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .botoncito2 {
+            width: 50px;
+            height: 20px;
+            margin-left: 10px;
+            color: #4c5050;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            font-size: 24px;           
+          }
+          .espacio{
+            margin-left: 10px;
+            margin-top: 10px;
+          }
+        .ar{
+            color: #0f5c68;
+            cursor: pointer; 
+        }
+        p{
+          text-align: justify;
+        }
+        .iconos{
+          width: 30px;
+        }
+        .text-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .text-link:hover {
+            color: darkblue;
+        }
+        .reflejar-horizontalmente {
+            transform: scaleX(-1);
+        }
+        .h1titulo{
+          margin-top: 15px;
+          
+        }
+        .container {
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+        
+    </style> 
+</head><!--//CARRUSEL-->   
+<body> <!--//IMAGENESDELCARRUSEL-->   
+    <h1> </h1>
+    <div class="container3">
+      <img class="reflejar-horizontalmente img0" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__doc_2023_1.svg" alt="Desc de la imagen">
+   
+     <h1 class="h1titulo ">Información importante y Preguntas frecuentes 
+      
+    
+    </h1>
+      <!-- <h1>
+  </h1>--> 
+    <div class="carousel-container">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+
+      
+        <div class="carousel-item active">
+            <img class="img1 d-block mx-auto" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__AV_Pregrado_V3.svg" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img class="img1 d-block mx-auto" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__AV_Pregrado_V3.svg" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img class="img1 d-block mx-auto" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__AV_Pregrado_V3.svg" alt="Slide 3">
+        </div>
+    </div>
+    <button class=" botoncito3 carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">  </span>
+    </button>
+    <button class="botoncito3 carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">  </span>
+    </button>
+</div> 
+    </div></div>
+
+    <h6 class="card-title">
+      <a>
+         En caso de problemas con la plataforma escribir a: soporte@uv.cl 
+       </a>
+                      <!--//ICONOPROFESORES--> 
+    </h>
+    <div class="container left-container">
+      <div id="faq" role="tablist" aria-multiselectable="true">
+          <!-- Sección Profesores completa -->
+          <div class="card">
+              <div class="card" role="tab" id="faqProfesores">
+                  <div class="card-header" data-bs-toggle="collapse" data-parent="#faq" href="#faqProfesoresContent" aria-expanded="true" aria-controls="faqProfesoresContent">
+                      <h5 class="card-title">
+                          <!-- Imagen para profesores -->
+                          <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__prof_acad_v1.png" alt="Desc de la imagen">
+                          <a class="ar">
+                              Profesores
+                          </a>
+                      </h5>
+                  </div>
+              </div>
+              <div id="faqProfesoresContent" class="collapse show" role="tabpanel" aria-labelledby="faqProfesores">
+                  <div class="card-body">
+                      <!-- Pregunta 1 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ1" aria-expanded="true" aria-controls="profesorQ1">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?
+                              </h5>
+                          </div>
+                          <div id="profesorQ1" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Académicos”.</strong>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 2 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ2" aria-expanded="false" aria-controls="profesorQ2">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo ver y ordenar mis cursos?
+                              </h5>
+                          </div>
+                          <div id="profesorQ2" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
+                                  <ul>
+                                      <li>Todos (Cursos Periodo Actual y pasados).</li>
+                                      <li>Curso periodo actual.</li>
+                                      <li>Cursos pasados.</li>
+                                      <li>Destacados.</li>
+                                      <li>Eliminados de la vista.</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 3 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ3" aria-expanded="false" aria-controls="profesorQ3">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo modifico mi perfil?
+                              </h5>
+                          </div>
+                          <div id="profesorQ3" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc.
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 4 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ4" aria-expanded="false" aria-controls="profesorQ4">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir participantes a un curso?
+                              </h5>
+                          </div>
+                          <div id="profesorQ4" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  Dirígete a la sección de grupos del curso y selecciona la opción para agregar participantes. Asigna estudiantes a grupos específicos.
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 5 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ5" aria-expanded="false" aria-controls="profesorQ5">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo se puede realizar una restauración?
+                              </h5>
+                          </div>
+                          <div id="profesorQ5" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
+                                  <strong>2.</strong> En el desplegable seleccionar <strong><em>“restaurar”.</em></strong><br>
+                                  <strong>3.</strong> En el proceso de restauración, se te pedirá que selecciones el archivo de respaldo del curso.
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 6 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ6" aria-expanded="false" aria-controls="profesorQ6">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cuál es el procedimiento para realizar una copia de seguridad de un curso?
+                              </h5>
+                          </div>
+                          <div id="profesorQ6" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
+                                  <strong>2.</strong> En el desplegable seleccionar <strong><em>“copia de seguridad”.</em></strong><br>
+                                  <strong>3.</strong> Ajustar configuraciones para la copia de seguridad.<br>
+                                  <strong>4.</strong> Pulsar en <strong><em>“ejecutar copia de seguridad”.</em></strong><br>
+                                  <strong>5.</strong> A continuación, en la parte de abajo están los archivos de las copias de seguridad realizadas, que pueden descargarse.
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 7 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ7" aria-expanded="false" aria-controls="profesorQ7">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo crear un cuestionario en el Aula Virtual?
+                              </h5>
+                          </div>
+                          <div id="profesorQ7" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  <strong>1.</strong> En la sección de curso, se debe habilitar la opción <strong><em>“Modo Edición”</em></strong>.<br>
+                                  <strong>2.</strong> Se debe agregar una actividad o recurso.<br>
+                                  <strong>3.</strong> Seleccionar la opción <strong><em>“Cuestionario”</em></strong>.<br>
+                                  <strong>4.</strong> Configurar las opciones básicas.<br>
+                                  <strong>5.</strong> Guardar cambios y mostrar.<br>
+                                  <strong>6.</strong> Seleccionar el botón de agregar preguntas.<br>
+                                  <strong>7.</strong> En la zona derecha hay un botón que dice <strong><em>“agregar”</em></strong>. Se puede añadir una pregunta nueva, añadir del banco de preguntas, o una pregunta aleatoria.
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Pregunta 8 -->
+                      <div class="card mb-3">
+                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ8" aria-expanded="false" aria-controls="profesorQ8">
+                              <h5 class="mb-0">
+                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir preguntas con diferentes formatos, como verdadero/falso o selección múltiple?
+                              </h5>
+                          </div>
+                          <div id="profesorQ8" class="collapse" role="tabpanel">
+                              <div class="card-body">
+                                  <strong>1.</strong> Crea un nuevo cuestionario o edita uno existente.<br>
+                                  <strong>2.</strong> Añade una nueva pregunta.<br>
+                                  <strong>3.</strong> Elige un tipo de pregunta: Al pulsar la opción de <strong><em>"nuevas preguntas"</em></strong> selecciona el tipo de pregunta <strong><em>"Verdadero/Falso".</em></strong>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Puedes continuar agregando más preguntas y respuestas aquí siguiendo la misma estructura -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+            <hr>
+            <h1>  </h1>
+            <!--//FAQESTUDIANTES-->
+            <div class="card">
+                <div class="card" role="tab" id="faqEstudiantes">
+                  <div class="card-header" data-toggle="collapse" data-parent="#faq" href="#faqEstudiantesContent" aria-expanded="true" aria-controls="faqEstudiantesContent">
+                      <h5 class="card-title">
+                        <!--//ICONOESTUDIANTES--> 
+                          <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__est_v1.png" alt="Desc de la imagen">
+                          <a class="ar">
+                              Estudiantes
+                          </a>
+                      </h5>
+                  </div>
+                </div>
+                <div id="faqEstudiantesContent" class="collapse" role="tabcard" aria-labelledby="faqEstudiantes">
+                  <div class="espacio">
+                    <div class="item">
+                      <h5 class="faq-q mb-2">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?</h5>
+                      <div class="faq-a">
+                          <p>Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Aula virtual pregrado”.</strong> </p>
+                      </div>
+                    </div><!--//item-->
+                    </div>
+                    <div class="espacio">
+                      <div class="item">
+                        <h5 class="faq-q mb-2">
+                          <i class="icon fa fa-question-circle text-primary"></i>
+                          ¿Cómo ver y ordenar mis cursos?
+                        </h5>
+                        <div class="faq-a">
+                          <p>Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
+                            - Todos (Cursos Periodo Actual y pasados).
+                            - Curso periodo actual.
+                            - Cursos pasados.
+                            - Destacados.
+                            - Eliminados de la vista.
+                          </p>
+                        </div>
+                      </div><!--//item-->
+                    </div>
+                    <div class="espacio">
+                      <div class="item">
+                        <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                          ¿Cómo modifico mi perfil?  </h5>
+                        <div class="faq-a">
+                            <p>Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc. 
+  
+                            </p>
+                        </div>
+                      </div><!--//item-->
+                      </div>
+                  <div class="espacio">
+                    <div class="item">
+                      <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                        ¿Cómo subir un archivo de tarea al aula virtual?   </h5>
+                      <div class="faq-a">
+                          <p>Primero debes encontrar la tarea dentro el curso en el Aula Virtual. Una vez hayas encontrado la tarea lee las instrucciones antes de subir tu archivo, asegúrate de leer todas las instrucciones proporcionadas por el profesor. Algunas tareas pueden tener requisitos específicos. Accede a la tarea dentro del curso y haga clic en <strong><em>"Enviar"</em></strong>.
+                          </p>
+                      </div>
+                    </div><!--//item-->
+                    </div>
+                    <div class="espacio">
+                      <div class="item">
+                        <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                          ¿Cómo ponerme en contacto con el académico del curso?  </h5>
+                        <div class="faq-a">
+                            <p>Puedes buscar la información de contacto del profesor en la sección de participantes o en la página principal del curso. Tambien tienes la posibilidad de enviar un mensaje a través de la plataforma o usar el correo proporcionado. </p>
+                        </div>
+                      </div><!--//item-->
+                      </div>
+                      <div class="espacio">
+                        <div class="item">
+                          <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                            ¿Qué precauciones debo tomar para rendir una evaluación tipo cuestionario?  </h5>
+                          <div class="faq-a">
+                              <p>
+                                Al momento de rendir un cuestionario debo tomar la precaución de abrir solo una vez el cuestionario en pestaña, además es importante tener una conexión estable a internet. 
+                            <span id="infoExamenBtn" class="text-link">Información sobre precauciones</span>
+                            <div id="infoExamenModal" class="modal">
+                              <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title">Precauciones para realizar un examen en el Aula Virtual</h5>
+                                          <button class ="botoncito2" type="button"  id="cerrarModalBtn" aria-label="Cerrar">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="modal-body">
+                                          <!--//PRECACUCIONESPARAEXAMEN--> 
+                                          <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/v2_consideraciones_cuestionario.jpg" alt="Desc de la imagen">
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>                                                          
+                              </p>
+                          </div>
+                        </div><!--//item-->
+                        </div>
+                        <div class="espacio">
+                          <div class="item">
+                            <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                              ¿Puedo revisar mis respuestas después de completar un cuestionario?   </h5>
+                            <div class="faq-a">
+                                <p>
+                                  Depende de la configuración del cuestionario. Algunos permiten la revisión después de completar, mientras que otros no. Consulta las instrucciones específicas del cuestionario a tu profesor.  </p>
+                            </div>
+                          </div>
+                          </div>
+                        <div class="espacio">
+                          <div class="item">
+                            <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                              ¿Qué pasa si tengo un problema que no puedo resolver?    </h5>
+                            <div class="faq-a">
+                                <p>
+                                  Cuando ocurre un problema que no puede resolver usted ni su académico, debe enviar una evidencia (captura de pantalla, video, etc) al correo<strong> aula.virtual@uv.cl</strong> indicando su nombre completo, rut y curso en donde presenta el inconveniente.   </p>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="espacio">
+                            <div class="item">
+                              <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                                ¿Qué debo hacer si tengo problemas técnicos durante una prueba en línea?   </h5>
+                              <div class="faq-a">
+                                  <p>
+                                    Informa al profesor de inmediato y busca ayuda técnica. Ten un plan de respaldo en caso de problemas técnicos para poder continuar con la evaluación.   </p>
+                              </div>
+                            </div>
+                            </div>
+                          <div class="espacio">
+                            <div class="item">
+                              <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                                ¿Qué hago si no puedo ver las asignaturas inscritas en el Aula Virtual?  </h5>
+                              <div class="faq-a">
+                                  <p>
+                                    <strong>1. </strong>Primero verifique que el curso no se encuentre en ninguno de los filtros del curso. 
+
+                                    <strong>2. </strong>Quizá aún no ha sido matriculado en el curso, de ser así espere unos días.  
+                                    
+                                    <strong>3. </strong>Si el problema persiste comuníquese con su académico.   </p>
+                              </div>
+                            </div>
+                            </div>    
+                              <div class="espacio">
+                                <div class="item">
+                                  <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
+                                    ¿Qué debo hacer si tengo problemas para visualizar los contenidos del curso?  </h5>
+                                  <div class="faq-a">
+                                      <p>
+                                        Verifica la compatibilidad del navegador y, si es necesario, actualizalo. Si el problema persiste, debe enviar una evidencia (captura de pantalla, video, etc.) al correo
+                                        <strong> aula.virtual@uv.cl</strong> indicando su nombre completo, rut y curso en donde presenta el inconveniente.   </p>
+                                  </div>
+                                </div>
+                                </div>      
+                </div>
+              </div><!--//TERMINAESTUDIANTES-->
+              <hr>
+              <!--//FAQVIDEOTUTORIALES-->
+              <div class="card">
+                <div class="card" role="tab" id="faqEstudiantess">
+                  <div class="card-header" data-toggle="collapse" data-parent="#faq" href="#faqEstudiantesContents" aria-expanded="true" aria-controls="faqEstudiantesContents">
+                    
+                      <h5 class="card-title">
+                        <!--//ICONOVIDEOTUTORIALES--> 
+                          <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__video_v1.png" alt="Desc de la imagen">
+                          <a class="ar" href="#faqEstudiantesContents" >
+                              Videotutoriales
+                          </a>
+                      </h5>
+               
+                </div>
+              </div>
+                <div id="faqEstudiantesContents" class="collapse" role="tabcard" aria-labelledby="faqEstudiantess">
+  <div class="card-body"> 
+                    <!--//FAQGESTIONDECURSO-->        
+                    <div class="card">
+                      
+                      <div class="card" role="tab" id="questionOneEs">
+                        <div class="card-header" data-toggle="collapse" data-parent="#faqEstudiantesContents" href="#answerOneEs" aria-expanded="true" aria-controls="answerOneEs">
+                            <h5 class="card-title">
+                                <a class="ar">
+                                  <!--//ICONOVIDEOTUTORIALES--> 
+                                    <img class="img2" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+                                    Gestión de curso
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                      <div id="answerOneEs" class="collapse" role="tabcard" aria-labelledby="questionOneEs">
+                        
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6 mb-4">
+                              <div class="card h-100">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Cómo realizar una Copia de Seguridad</h5>
+                                  </div>
+                                  <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=FpTSR3PmpR0&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  <span id="infoExamenBtn3" class="text-link spancito">Más información aquí</span>
+                                  <!--//MODALCOPIA-->
+                                  <div id="infoExamenModal3" class="modal infoExamenModal">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Cómo realizar una copia de seguridad.</h5>
+                                                <button class="botoncito2" type="button" id="cerrarModalBtn3" aria-label="Cerrar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="modal-body">
+                                                    <div class="zoom-container2">
+                                                        <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__copia_seguridad_012.jpg" alt="Descripción de la imagen" class="zoomable2" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__copia_seguridad_012.jpg">
+                                                        <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__copia_seguridad_022.jpg" alt="Descripción de la imagen" class="zoomable2" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__copia_seguridad_022.jpg">
+                                                    </div>
+                                                    <div class="zoomed-image-container2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                          </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cómo realizar una Importación</h5>
+                                    </div>
+                                    <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=Wkwprj3CD-0&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                    <!--//MODALIMPORTACION-->
+                                    <div id="infoExamenModal4" class="modal modal-fullscreen infoExamenModal">
+                                      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <h5 class="modal-title">Cómo realizar una importación.</h5>
+                                                  <button class="botoncito2" type="button" id="cerrarModalBtn4" aria-label="Cerrar">
+                                                      <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                 
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="modal-body">
+                                                      <div class="zoom-container">
+                                              
+                                                          <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_012.jpg" alt="Descripción de la imagen" class="zoomable" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_012.jpg">
+                                                          <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_022.jpg" alt="Descripción de la imagen" class="zoomable" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_022.jpg">
+                                                          <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_032.jpg" alt="Descripción de la imagen" class="zoomable" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__importación_032.jpg">
+                                                          <div class="zoomed-image-container"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                             
+
+                                  <span id="infoExamenBtn4" class="text-link spancito">Más información aquí</span>
+                                </div>
+                            </div>              
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo realizar una restauración</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=r-qjQZKIjXI&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                      <!--//MODALRESTAURACION-->
+                                      <div id="infoExamenModal5" class="modal infoExamenModal">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Cómo realizar una Restauración.</h5>
+                                                    <button class="botoncito2" type="button" id="cerrarModalBtn5" aria-label="Cerrar">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-body">
+                                                        <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__restauración_012.jpg" alt="Descripción de la imagen" class="zoomable3" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__restauración_012.jpg">
+                                                    </div>
+                                                    <div class="zoomed-image-container3"></div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+<span id="infoExamenBtn5" class="text-link spancito">Más información aquí</span>
+                                    </div>
+                              </div>            
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo realizar una unión meta-enlace</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=4RqLae9j1vU&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                      <!--//MODALMETAENLACE-->
+                                      <div id="infoExamenModal6" class="modal infoExamenModal">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Cómo realizar una unión meta-enlace.</h5>
+                                                    <button class="botoncito2" type="button" id="cerrarModalBtn6" aria-label="Cerrar">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-body">
+                                                        <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__unión_2_cursos_012.jpg" alt="Descripción de la imagen" class="zoomable4" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__unión_2_cursos_012.jpg">
+                                                        <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__unión_2_cursos_022.jpg" alt="Descripción de la imagen" class="zoomable4" data-zoom-src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__unión_2_cursos_022.jpg">
+                                                    </div>
+                                                    <div class="zoomed-image-container4"></div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <span id="infoExamenBtn6" class="text-link spancito">Más información aquí</span>
+                                    </div>
+                              </div>
+
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo inscribir usuarios</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=3f7hFaXZXSA&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  </div>
+                              </div>
+
+                              
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <!--//FAQACTIVIDADES-->
+                    <div class="card">
+                      <div class="card" role="tab" id="questionOneEss">
+                        <div class="card-header" data-toggle="collapse" data-parent="#faqEstudiantesContents" href="#answerOneEss" aria-expanded="true" aria-controls="answerOneEss">
+                            <h5 class="card-title">
+                              <!--//ICONOVIDEOTUTORIALES--> 
+                                <img class="img2" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+                                <a class="ar">
+                                    Gestión de actividades y recursos
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                      <div id="answerOneEss" class="collapse" role="tabcard" aria-labelledby="questionOneEss">
+                        <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo configurar una tarea</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=zscgSOj0_M0&t=1s&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo configurar una consulta</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=Y9K_Hk1LGB4&t=1s&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo configurar un foro</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=31JYyPDe5cU&t=1s&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                  <div class="card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Cómo cargar un archivo</h5>
+                                      </div>
+                                      <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=TFta_PjfH9o&ab_channel=CREATIC" target="_blank">Ir al tutorial»</a></p>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cómo crear un cuestionario</h5>
+                                    </div>
+                                    <p class="button" style="text-align: left;"><a class="btn btn-primary" href="https://www.youtube.com/watch?v=riawdOjV-tU" target="_blank">Ir al tutorial»</a></p>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+          </div>
+    </div>
+    <!--//PROPIEDADINTELECTUAL-->
+    <div class="right-container">
+        <h2 class="h1r"> Propiedad Intelectual 
+         <!--//ICONOPROPIEDADINTELECTUAL--> 
+        <img class="img4" src="https://creatic.uv.cl/templates/yootheme/cache/31/protegida-3125c3b9.webp" alt="Desc de la imagen">
+       </h2>
+        <h1> 
+        </h1>
+       <hr>
+       <div class="accordion module-accordion" id="module-accordion">
+    <div class="module-item card" data-toggle="collapse" data-target="#module-1" aria-expanded="false" aria-controls="module-1">
+        <div class="module-header card-header" id="module-heading-1">
+            <h5 class="module-title mb-0">
+              
+                <img class="img3" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+                <a class="ar"  aria-expanded="false" aria-controls="module-1">
+                    ¿Puedo usar material que encontré en internet?
+              </a>
+            </h5>
+          </div>
+          <div id="module-1" class="module-content collapse" aria-labelledby="module-heading-1">
+            <div class="card-body p-0">
+              <div class="module-sub-item faq-a">
+                <h4>
+                </h4>
+                <p> Las normas de propiedad intelectual permiten utilizar obras protegidas en el contexto de actividades educacionales. Sin embargo, no se puede distribuir ese material a los estudiantes, por ejemplo, enviarlo a sus correos o permitir su descarga, salvo que la obra sea de dominio común, es decir no se encuentre protegida.</p>
+              </div><!--//module-sub-item-->
+            </div><!--//card-body-->
+          </div><!--//module-content-->
+        </div><!--//module-item-->
+      </div>
+      <div class="accordion module-accordion" id="module-accordion2">
+        <div class="module-item card" data-toggle="collapse" data-target="#module-12" aria-expanded="false" aria-controls="module-12">
+            <div class="module-header card-header" id="module-heading-12">
+                <h5 class="module-title mb-0">
+                    <img class="img3" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+                    <a class="ar" aria-expanded="false" aria-controls="module-12">
+                        ¿Cómo sé si una obra está protegida?
+                    </a>
+                </h5>
+            </div>
+            <div id="module-12" class="collapse" aria-labelledby="module-heading-12">
+
+                <div class="card-body p-0">
+                    <div class="module-sub-item faq-a">
+                        <h4></h4>
+                        <p>Hay que recordar que no es necesario registrar o inscribir una obra para que esté protegida, pues la inscripción constituye prueba de autoría. De esta manera, no todo lo que encuentro en internet es libre, es responsabilidad de quien utiliza la obra determinar si está protegida para compartirla o si sólo puede usarla en virtud de alguna excepción como por ejemplo para fines educacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="accordion module-accordion" id="module-accordion3">
+    <div class="module-item card" data-toggle="collapse" data-target="#module-13" aria-expanded="false" aria-controls="module-13">
+        <div class="module-header card-header" id="module-heading-13">
+            <h5 class="module-title mb-0">
+                <img class="img3" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+                <a class="card-toggle module-toggle ar" aria-expanded="false" aria-controls="module-13">
+                    ¿Qué pasa con los videos, presentaciones o materiales producidos por los docentes en el desempeño de su cargo?
+                </a>
+            </h5>
+        </div>
+        <div id="module-13" class="module-content collapse" aria-labelledby="module-heading-13">
+            <div class="card-body p-0">
+                <div class="module-sub-item faq-a">
+                    <h4></h4>
+                    <p>En el caso de las universidades públicas, las instituciones son titulares del derecho patrimonial de autor respecto de las obras producidas por funcionarios. El docente conserva el derecho moral, que implica que debe ser reconocida su autoría, pero la universidad puede utilizarla, cederla y difundirla. También pueden ser incluidos estos materiales en los repositorios digitales institucionales o el titular de derecho, en el caso del rector, puede liberarlas para que formen parte del Patrimonio Cultural Común (obras de dominio público que pueden ser utilizadas libremente).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion module-accordion" id="module-accordion4">
+  <div class="module-item card" data-toggle="collapse" data-target="#module-14" aria-expanded="false" aria-controls="module-14">
+      <div class="module-header card-header" id="module-heading-14">
+          <h5 class="module-title mb-0">
+              <img class="img3" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+              <a class="card-toggle module-toggle ar" aria-expanded="false" aria-controls="module-14">
+                  ¿Qué puedo hacer para que mis grabaciones no anden por internet?
+              </a>
+          </h5>
+      </div>
+      <div id="module-14" class="module-content collapse" aria-labelledby="module-heading-14">
+          <div class="card-body p-0">
+              <div class="module-sub-item faq-a">
+                  <h4></h4>
+                  <p>Los materiales producidos en el desempeño del cargo de docente de la UV pertenecen a la Universidad y ésta puede distribuirlos. La alternativa para evitar que las personas ajenas a la Universidad como institución lo diseminen, es no permitir su descarga o usar algún tipo de bloqueo.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="accordion module-accordion" id="module-accordion5">
+  <div class="module-item card" data-toggle="collapse" data-target="#module-15" aria-expanded="false" aria-controls="module-15">
+      <div class="module-header card-header" id="module-heading-15">
+          <h4 class="module-title mb-0">
+              <img class="img3" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/chevron-down-solid.svg" alt="Desc de la imagen">
+              <a class="card-toggle module-toggle ar" aria-expanded="false" aria-controls="module-15">
+                  ¿Los estudiantes pueden grabar las presentaciones o sacar fotografías de los videos?
+              </a>
+          </h4>
+      </div>
+      <div id="module-15" class="module-content collapse" aria-labelledby="module-heading-15">
+          <div class="card-body p-0">
+              <div class="module-sub-item faq-a">
+                  <h4></h4>
+                  <p>Las clases dictadas en instituciones educacionales, podrán ser anotadas o recogidas en cualquier forma por aquellos a quienes van dirigidas, pero no podrán ser publicadas, total o parcialmente, sin autorización de sus autores.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+      <h4>
+      </h4>
+      <hr>
+      <button id="infoExamenBtn2" class="botoncito"><b>Más información</b></button>
+    <!--//MODALPROPIEDAD-->
+      <div id="infoExamenModal2" class="modal">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Propiedad Intelectual</h5>
+                  <button class ="botoncito2" type="button" class="close" id="cerrarModalBtn2" aria-label="Cerrar">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body">
+                  <!--//IMAGENPROPIEDAD-->
+                  <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/Propiedad intelectual V2.jpg" alt="Desc de la imagen">
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+  //ZOOMENMODALES
+      function setupZoomableModal(containerSelector, imageSelector, zoomContainerSelector, zoomedImageClass) {
+    const modals = document.querySelectorAll(containerSelector);
+    const zoomedContainer = document.querySelector(zoomContainerSelector);
+
+    modals.forEach(function (modal) {
+        const images = modal.querySelectorAll(imageSelector);
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                const zoomSrc = this.getAttribute('src');
+                const zoomedImage = document.createElement('img');
+
+   
+                zoomedImage.src = zoomSrc;
+                zoomedImage.classList.add(zoomedImageClass);
+
+
+                zoomedContainer.innerHTML = '';
+
+              
+                zoomedContainer.appendChild(zoomedImage);
+
+            
+                zoomedContainer.style.display = zoomedContainer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    });
+    
+    zoomedContainer.addEventListener('click', function () {
+        this.style.display = 'none';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    setupZoomableModal('.infoExamenModal', '.zoomable', '.zoomed-image-container', 'zoomed-image');
+});
+document.addEventListener('DOMContentLoaded', function () {
+    setupZoomableModal('.infoExamenModal', '.zoomable2', '.zoomed-image-container2', 'zoomed-image2');
+});
+document.addEventListener('DOMContentLoaded', function () {
+    setupZoomableModal('.infoExamenModal', '.zoomable3', '.zoomed-image-container3', 'zoomed-image3');
+});
+document.addEventListener('DOMContentLoaded', function () {
+    setupZoomableModal('.infoExamenModal', '.zoomable4', '.zoomed-image-container4', 'zoomed-image4');
+});
+
+
+//QUEFUNCIONENLOSMODAL
+      document.addEventListener("DOMContentLoaded", function() {
+
+          var infoExamenBtn = document.getElementById("infoExamenBtn");
+          var infoExamenBtn2 = document.getElementById("infoExamenBtn2");
+          var infoExamenBtn3 = document.getElementById("infoExamenBtn3"); 
+
+          var cerrarModalBtn = document.getElementById("cerrarModalBtn");
+          var cerrarModalBtn2 = document.getElementById("cerrarModalBtn2");
+          var cerrarModalBtn3 = document.getElementById("cerrarModalBtn3");
+  
+  
+          var infoExamenModal = document.getElementById("infoExamenModal");
+          var infoExamenModal2 = document.getElementById("infoExamenModal2");
+          var infoExamenModal3 = document.getElementById("infoExamenModal3");
+  
+          var infoExamenBtn4 = document.getElementById("infoExamenBtn4");
+var cerrarModalBtn4 = document.getElementById("cerrarModalBtn4");
+var infoExamenModal4 = document.getElementById("infoExamenModal4");
+infoExamenBtn4.addEventListener("click", function() {
+    infoExamenModal4.style.display = "block";
+});
+cerrarModalBtn4.addEventListener("click", function() {
+    infoExamenModal4.style.display = "none";
+});
+var infoExamenBtn5 = document.getElementById("infoExamenBtn5");
+var cerrarModalBtn5 = document.getElementById("cerrarModalBtn5");
+var infoExamenModal5 = document.getElementById("infoExamenModal5");
+infoExamenBtn5.addEventListener("click", function() {
+    infoExamenModal5.style.display = "block";
+});
+cerrarModalBtn5.addEventListener("click", function() {
+    infoExamenModal5.style.display = "none";
+});
+var infoExamenBtn6 = document.getElementById("infoExamenBtn6");
+var cerrarModalBtn6 = document.getElementById("cerrarModalBtn6");
+var infoExamenModal6 = document.getElementById("infoExamenModal6");
+
+infoExamenBtn6.addEventListener("click", function() {
+    infoExamenModal6.style.display = "block";
+});
+cerrarModalBtn6.addEventListener("click", function() {
+    infoExamenModal6.style.display = "none";
+});
+       
+          infoExamenBtn.addEventListener("click", function() {
+              infoExamenModal.style.display = "block";
+          });
+  
+          infoExamenBtn2.addEventListener("click", function() {
+              infoExamenModal2.style.display = "block";
+          });
+  
+          infoExamenBtn3.addEventListener("click", function() {
+              infoExamenModal3.style.display = "block";
+          });
+  
+        
+          cerrarModalBtn.addEventListener("click", function() {
+              infoExamenModal.style.display = "none";
+          });
+  
+          cerrarModalBtn2.addEventListener("click", function() {
+              infoExamenModal2.style.display = "none";
+          });
+  
+          cerrarModalBtn3.addEventListener("click", function() {
+              infoExamenModal3.style.display = "none";
+          }); 
+      });
+  </script>
+</body>
+
+</html>

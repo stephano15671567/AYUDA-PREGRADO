@@ -5,213 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <title>Ayuda</title>
     <style>
-      body {
-  max-width: 100%;
-  margin: 0 auto;
-}
-       .carousel-control-prev,
-    .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: white;
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
-  .carousel-container {
-    width: 100%;
-    max-width: calc(50% - 10px); /* 10px para el espacio entre contenedores */
-    overflow: hidden;
-}
-
-      .container3 {
-        display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    position: relative;
-    width: 100%;
-    }
-    .carousel-inner {
-      text-align: center; /* Ajuste para centrar la imagen en el carrusel */
-    width: 100%; /* Ajusta este valor según tus necesidades */
-    
-    padding: 0;}
-
-      #carouselExampleFade {
-        display: block;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 81%;
-    float: right;
-
-    }
-#infoExamenModal4 .modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  overflow-y: auto; 
-}
-
-#infoExamenModal4 .zoom-container {
-  display: block;
-  text-align: center;
-}
-
-#infoExamenModal4 .zoomable {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-    }
-   
-    [id^="faq"]:target::before {
-      content: '';
-      display: block;
-      height: 50vh;
-      margin-top: -50vh;
-      visibility: hidden;
-    }
-    .zoom-container {
-      display: flex;
-      overflow-y: auto;
-    }
-    .zoomed-image-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: none;
-      pointer-events: none;
-    }
-    .zoomed-image {
-      max-width: 10%;
-      max-height: 97vh;
-      display: block;
-  margin: 0 auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    }
-    .zoomable {
-      width: 100%;
-      cursor: pointer;
-    }
-    #infoExamenModal3 .modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-}
-#infoExamenModal3 .zoom-container2 {
-  display: block;
-  text-align: center;
-}
-#infoExamenModal3 .zoomable2 {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-#infoExamenModal3 .zoomed-image-container2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  pointer-events: none;
-}
-#infoExamenModal3 .zoomed-image2 {
-  max-width: 100%;
-  max-height: 97vh;
-  display: block;
-  margin: 0 auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#infoExamenModal3 .zoomable2 {
-  width: 100%;
-  cursor: pointer;
-}
-#infoExamenModal5 .modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-}
-#infoExamenModal5 .zoom-container3 {
-    display: block;
-    text-align: center;
-}
-#infoExamenModal5 .zoomable3 {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-#infoExamenModal5 .zoomed-image-container3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    pointer-events: none;
-}
-#infoExamenModal5 .zoomed-image3 {
-    max-width: 100%;
-    max-height: 97vh;
-    display: block;
-    margin: 0 auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#infoExamenModal5 .zoomable3 {
-    width: 100%;
-    cursor: pointer;
-}
-#infoExamenModal6 .modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-}
-#infoExamenModal6 .zoom-container4 {
-    display: block;
-    text-align: center;
-}
-#infoExamenModal6 .zoomable4 {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-#infoExamenModal6 .zoom-container4 {
-    display: flex;
-    overflow-y: auto;
-}
-#infoExamenModal6 .zoomed-image-container4 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    pointer-events: none;
-}
-#infoExamenModal6 .zoomed-image4 {
-    max-width: 100%;
-    max-height: 97vh;
-    display: block;
-    margin: 0 auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#infoExamenModal6 .zoomable4 {
-    width: 100%;
-    cursor: pointer;
-}    
+        body {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .carousel-container {
+            width: 100%;
+            max-width: calc(50% - 10px);
+            overflow: hidden;
+        }
+        .container3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            width: 100%;
+        }
+        .carousel-inner {
+            text-align: center;
+            width: 100%;
+            padding: 0;
+        }
+        #carouselExampleFade {
+            display: block;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 81%;
+            float: right;
+        }
+        #infoExamenModal4 .modal-body,
+        #infoExamenModal3 .modal-body,
+        #infoExamenModal5 .modal-body,
+        #infoExamenModal6 .modal-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        #infoExamenModal4 .zoom-container,
+        #infoExamenModal3 .zoom-container2,
+        #infoExamenModal5 .zoom-container3,
+        #infoExamenModal6 .zoom-container4 {
+            display: block;
+            text-align: center;
+        }
+        #infoExamenModal4 .zoomable,
+        #infoExamenModal3 .zoomable2,
+        #infoExamenModal5 .zoomable3,
+        #infoExamenModal6 .zoomable4 {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        [id^="faq"]:target::before {
+            content: '';
+            display: block;
+            height: 50vh;
+            margin-top: -50vh;
+            visibility: hidden;
+        }
+        .zoom-container {
+            display: flex;
+            overflow-y: auto;
+        }
+        .zoomed-image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            pointer-events: none;
+        }
+        .zoomed-image {
+            max-width: 10%;
+            max-height: 97vh;
+            display: block;
+            margin: 0 auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .zoomable {
+            width: 100%;
+            cursor: pointer;
+        }
         .modal {
             display: none;
             position: fixed;
@@ -232,123 +124,113 @@
             max-width: 100%;
             height: auto;
         }
-        .spancito{
-          display: flex;
-          justify-content: center;
-          margin-bottom: 15px;
+        .spancito {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
         }
         .module-item {
-          display: flex;
-          flex-direction: column; 
+            display: flex;
+            flex-direction: column;
         }
         .module-title {
-          display: flex;
-          font-size: 18px;
-          align-items: center; 
+            display: flex;
+            font-size: 18px;
+            align-items: center;
         }
         .item {
-          display: flex;
-          flex-direction: column; 
+            display: flex;
+            flex-direction: column;
         }
-
         .faq-q {
-          display: flex;
-          align-items: center; 
-          margin-right: 24px;
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
         }
         .faq-a {
-          
-          justify-content: left;
-          margin-left: 24px; 
-          margin-right: 24px;
+            justify-content: left;
+            margin-left: 24px;
+            margin-right: 24px;
         }
         .left-container {
             float: left;
             width: 55%;
         }
         .spacer {
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
         }
         .right-container {
             float: right;
-            width: 40%; 
+            width: 40%;
             border: 1px solid #e5e5e5;
             background-color: #f7f7f7;
             padding: 20px;
             border-radius: 8px;
             justify-content: center;
-            
             max-width: 100%;
-   
         }
-      
         .img0 {
-            width: 200px; 
+            width: 200px;
             height: auto;
-            
         }
-        .img2{
-       
-          margin-right: 10px;
+        .img2 {
+            margin-right: 10px;
         }
-        .img3{
-          display:flex;
-          height: auto;
-          margin-right:30px;
+        .img3 {
+            display: flex;
+            height: auto;
+            margin-right: 30px;
         }
-        .img4{
-          width: 50px;
-          height: auto;
-          margin:0 auto; 
+        .img4 {
+            width: 50px;
+            height: auto;
+            margin: 0 auto;
         }
-        .img1{
-          
-          display: inline-block;
-    max-width: 100%;
-
+        .img1 {
+            display: inline-block;
+            max-width: 100%;
         }
         .botoncito3 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: #000;
-}
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #000;
+        }
         h5 {
-          text-align: left;
+            text-align: left;
         }
         h3 {
-            color: #0f5c68      
+            color: #0f5c68;
         }
         h6 {
-            color: #0f5c68      
+            color: #0f5c68;
         }
         .h1r {
-            margin: 0; 
+            margin: 0;
             color: #0f5c68;
-            text-align: center;    
+            text-align: center;
         }
         h1 {
-          text-align: center;
-            margin: 0; 
-            color: #0f5c68;    
-        } 
+            text-align: center;
+            margin: 0;
+            color: #0f5c68;
+        }
         .botoncito {
             width: 200px;
             height: 50px;
             border-radius: 20px;
             margin: auto;
-            color: #0f5c68 ;
-            
+            color: #0f5c68;
             background-color: #ffffff;
-            border: 1px solid#e5e5e5; 
+            border: 1px solid #e5e5e5;
             display: flex;
             align-items: center;
             justify-content: center;
-          }
-          .botoncito2 {
+        }
+        .botoncito2 {
             width: 50px;
             height: 20px;
             margin-left: 10px;
@@ -358,21 +240,21 @@
             align-items: center;
             justify-content: center;
             background: none;
-            font-size: 24px;           
-          }
-          .espacio{
+            font-size: 24px;
+        }
+        .espacio {
             margin-left: 10px;
             margin-top: 10px;
-          }
-        .ar{
+        }
+        .ar {
             color: #0f5c68;
-            cursor: pointer; 
+            cursor: pointer;
         }
-        p{
-          text-align: justify;
+        p {
+            text-align: justify;
         }
-        .iconos{
-          width: 30px;
+        .iconos {
+            width: 30px;
         }
         .text-link {
             color: blue;
@@ -385,18 +267,46 @@
         .reflejar-horizontalmente {
             transform: scaleX(-1);
         }
-        .h1titulo{
-          margin-top: 15px;
-          
+        .h1titulo {
+            margin-top: 15px;
         }
         .container {
-
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
         
-    </style> 
-</head><!--//CARRUSEL-->   
+        /* Custom styles for the boxes */
+        .card-header[data-bs-toggle="collapse"] {
+            background-color: #008080; /* Color para las preguntas */
+            color: white;
+        }
+        
+        .card-header[role="tab"] {
+            background-color: #006666; /* Color para las secciones principales */
+            color: white;
+        }
+        
+        /* Ajusta la caja de la sección "Profesores", "Estudiantes", y "Videotutoriales" */
+        #faqProfesoresContent,
+        #faqEstudiantesContent,
+        #faqEstudiantesContents {
+            max-width: 75%; /* Ajusta este valor según el ancho deseado */
+            margin-left: 5%; /* Ajusta este valor para controlar la distancia desde la izquierda */
+        }
+        
+        /* General FAQ container */
+        #faq {
+            max-width: 65%; /* Ajusta según el tamaño que deseas para toda la caja */
+            margin-left: 5%; /* Ajusta este valor para controlar la distancia desde la izquierda */
+        }
+        
+    </style>
+    
+      
+      
+</head><!--//
+CARRUSEL--> 
+
 <body> <!--//IMAGENESDELCARRUSEL-->   
     <h1> </h1>
     <div class="container3">
@@ -440,313 +350,398 @@
        </a>
                       <!--//ICONOPROFESORES--> 
     </h>
-    <div class="container left-container">
-      <div id="faq" role="tablist" aria-multiselectable="true">
-          <!-- Sección Profesores completa -->
-          <div class="card">
-              <div class="card" role="tab" id="faqProfesores">
-                  <div class="card-header" data-bs-toggle="collapse" data-parent="#faq" href="#faqProfesoresContent" aria-expanded="true" aria-controls="faqProfesoresContent">
-                      <h5 class="card-title">
-                          <!-- Imagen para profesores -->
-                          <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__prof_acad_v1.png" alt="Desc de la imagen">
-                          <a class="ar">
-                              Profesores
-                          </a>
-                      </h5>
-                  </div>
-              </div>
-              <div id="faqProfesoresContent" class="collapse show" role="tabpanel" aria-labelledby="faqProfesores">
-                  <div class="card-body">
-                      <!-- Pregunta 1 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ1" aria-expanded="true" aria-controls="profesorQ1">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?
-                              </h5>
-                          </div>
-                          <div id="profesorQ1" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Académicos”.</strong>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 2 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ2" aria-expanded="false" aria-controls="profesorQ2">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo ver y ordenar mis cursos?
-                              </h5>
-                          </div>
-                          <div id="profesorQ2" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
-                                  <ul>
-                                      <li>Todos (Cursos Periodo Actual y pasados).</li>
-                                      <li>Curso periodo actual.</li>
-                                      <li>Cursos pasados.</li>
-                                      <li>Destacados.</li>
-                                      <li>Eliminados de la vista.</li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 3 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ3" aria-expanded="false" aria-controls="profesorQ3">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo modifico mi perfil?
-                              </h5>
-                          </div>
-                          <div id="profesorQ3" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 4 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ4" aria-expanded="false" aria-controls="profesorQ4">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir participantes a un curso?
-                              </h5>
-                          </div>
-                          <div id="profesorQ4" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  Dirígete a la sección de grupos del curso y selecciona la opción para agregar participantes. Asigna estudiantes a grupos específicos.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 5 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ5" aria-expanded="false" aria-controls="profesorQ5">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo se puede realizar una restauración?
-                              </h5>
-                          </div>
-                          <div id="profesorQ5" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
-                                  <strong>2.</strong> En el desplegable seleccionar <strong><em>“restaurar”.</em></strong><br>
-                                  <strong>3.</strong> En el proceso de restauración, se te pedirá que selecciones el archivo de respaldo del curso.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 6 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ6" aria-expanded="false" aria-controls="profesorQ6">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cuál es el procedimiento para realizar una copia de seguridad de un curso?
-                              </h5>
-                          </div>
-                          <div id="profesorQ6" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
-                                  <strong>2.</strong> En el desplegable seleccionar <strong><em>“copia de seguridad”.</em></strong><br>
-                                  <strong>3.</strong> Ajustar configuraciones para la copia de seguridad.<br>
-                                  <strong>4.</strong> Pulsar en <strong><em>“ejecutar copia de seguridad”.</em></strong><br>
-                                  <strong>5.</strong> A continuación, en la parte de abajo están los archivos de las copias de seguridad realizadas, que pueden descargarse.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 7 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ7" aria-expanded="false" aria-controls="profesorQ7">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo crear un cuestionario en el Aula Virtual?
-                              </h5>
-                          </div>
-                          <div id="profesorQ7" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  <strong>1.</strong> En la sección de curso, se debe habilitar la opción <strong><em>“Modo Edición”</em></strong>.<br>
-                                  <strong>2.</strong> Se debe agregar una actividad o recurso.<br>
-                                  <strong>3.</strong> Seleccionar la opción <strong><em>“Cuestionario”</em></strong>.<br>
-                                  <strong>4.</strong> Configurar las opciones básicas.<br>
-                                  <strong>5.</strong> Guardar cambios y mostrar.<br>
-                                  <strong>6.</strong> Seleccionar el botón de agregar preguntas.<br>
-                                  <strong>7.</strong> En la zona derecha hay un botón que dice <strong><em>“agregar”</em></strong>. Se puede añadir una pregunta nueva, añadir del banco de preguntas, o una pregunta aleatoria.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Pregunta 8 -->
-                      <div class="card mb-3">
-                          <div class="card-header" data-bs-toggle="collapse" data-parent="#faqProfesoresContent" href="#profesorQ8" aria-expanded="false" aria-controls="profesorQ8">
-                              <h5 class="mb-0">
-                                  <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir preguntas con diferentes formatos, como verdadero/falso o selección múltiple?
-                              </h5>
-                          </div>
-                          <div id="profesorQ8" class="collapse" role="tabpanel">
-                              <div class="card-body">
-                                  <strong>1.</strong> Crea un nuevo cuestionario o edita uno existente.<br>
-                                  <strong>2.</strong> Añade una nueva pregunta.<br>
-                                  <strong>3.</strong> Elige un tipo de pregunta: Al pulsar la opción de <strong><em>"nuevas preguntas"</em></strong> selecciona el tipo de pregunta <strong><em>"Verdadero/Falso".</em></strong>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Puedes continuar agregando más preguntas y respuestas aquí siguiendo la misma estructura -->
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
+    <div class="container mt-4"></div>
+        <div id="faq" role="tablist" aria-multiselectable="true">
+            <!-- Sección Profesores completa -->
+            <!-- Sección Profesores completa -->
+<div id="faq" role="tablist" aria-multiselectable="true">
+    <div class="card">
+        <div class="card-header" role="tab" id="faqProfesores" style="background-color: #003b4d;">
+            <h5 class="card-title" style="color: white;">
+                <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__prof_acad_v1.png" alt="Desc de la imagen">
+                <a class="ar" style="color: white;">Profesores</a>
+            </h5>
+        </div>
+        
+        <div id="faqProfesoresContent" class="collapse show" role="tabpanel" aria-labelledby="faqProfesores">
+            <div class="card-body">
+                <!-- Pregunta 1 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ1" aria-expanded="true" aria-controls="profesorQ1" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?
+                        </h5>
+                    </div>
+                    <div id="profesorQ1" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Académicos”.</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ2" aria-expanded="false" aria-controls="profesorQ2" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo ver y ordenar mis cursos?
+                        </h5>
+                    </div>
+                    <div id="profesorQ2" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
+                            <ul>
+                                <li>Todos (Cursos Periodo Actual y pasados).</li>
+                                <li>Curso periodo actual.</li>
+                                <li>Cursos pasados.</li>
+                                <li>Destacados.</li>
+                                <li>Eliminados de la vista.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 3 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ3" aria-expanded="false" aria-controls="profesorQ3" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo modifico mi perfil?
+                        </h5>
+                    </div>
+                    <div id="profesorQ3" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ4" aria-expanded="false" aria-controls="profesorQ4" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir participantes a un curso?
+                        </h5>
+                    </div>
+                    <div id="profesorQ4" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            Dirígete a la sección de grupos del curso y selecciona la opción para agregar participantes. Asigna estudiantes a grupos específicos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ5" aria-expanded="false" aria-controls="profesorQ5" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo se puede realizar una restauración?
+                        </h5>
+                    </div>
+                    <div id="profesorQ5" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
+                            <strong>2.</strong> En el desplegable seleccionar <strong><em>“restaurar”.</em></strong><br>
+                            <strong>3.</strong> En el proceso de restauración, se te pedirá que selecciones el archivo de respaldo del curso.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ6" aria-expanded="false" aria-controls="profesorQ6" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cuál es el procedimiento para realizar una copia de seguridad de un curso?
+                        </h5>
+                    </div>
+                    <div id="profesorQ6" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> Desde el menú del curso, en el botón de <strong><em>“más”</em></strong>, pulsar en <strong><em>“reutilización de curso”.</em></strong><br>
+                            <strong>2.</strong> En el desplegable seleccionar <strong><em>“copia de seguridad”.</em></strong><br>
+                            <strong>3.</strong> Ajustar configuraciones para la copia de seguridad.<br>
+                            <strong>4.</strong> Pulsar en <strong><em>“ejecutar copia de seguridad”.</em></strong><br>
+                            <strong>5.</strong> A continuación, en la parte de abajo están los archivos de las copias de seguridad realizadas, que pueden descargarse.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ7" aria-expanded="false" aria-controls="profesorQ7" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo crear un cuestionario en el Aula Virtual?
+                        </h5>
+                    </div>
+                    <div id="profesorQ7" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> En la sección de curso, se debe habilitar la opción <strong><em>“Modo Edición”</em></strong>.<br>
+                            <strong>2.</strong> Se debe agregar una actividad o recurso.<br>
+                            <strong>3.</strong> Seleccionar la opción <strong><em>“Cuestionario”</em></strong>.<br>
+                            <strong>4.</strong> Configurar las opciones básicas.<br>
+                            <strong>5.</strong> Guardar cambios y mostrar.<br>
+                            <strong>6.</strong> Seleccionar el botón de agregar preguntas.<br>
+                            <strong>7.</strong> En la zona derecha hay un botón que dice <strong><em>“agregar”</em></strong>. Se puede añadir una pregunta nueva, añadir del banco de preguntas, o una pregunta aleatoria.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ8" aria-expanded="false" aria-controls="profesorQ8" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo añadir preguntas con diferentes formatos, como verdadero/falso o selección múltiple?
+                        </h5>
+                    </div>
+                    <div id="profesorQ8" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> Crea un nuevo cuestionario o edita uno existente.<br>
+                            <strong>2.</strong> Añade una nueva pregunta.<br>
+                            <strong>3.</strong> Elige un tipo de pregunta: Al pulsar la opción de <strong><em>"nuevas preguntas"</em></strong> selecciona el tipo de pregunta <strong><em>"Verdadero/Falso".</em></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ9" aria-expanded="false" aria-controls="profesorQ9" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Puedo permitir intentos múltiples en los cuestionarios y cómo se gestionan?
+                        </h5>
+                    </div>
+                    <div id="profesorQ9" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> Configuración del Cuestionario: Ve al cuestionario específico al que deseas permitir intentos múltiples.<br>
+                            <strong>2.</strong> Editar Configuración del Cuestionario: Haz clic en la opción "Configuración" del cuestionario.<br>
+                            <strong>3.</strong> Configuración de Intentos: Desplázate hacia abajo hasta la sección "Calificación".<br>
+                            <strong>4.</strong> Busca la opción llamada "Intentos permitidos": Selecciona la cantidad de intentos que deseas permitir. Puedes configurar esto como "Sin límite" o establecer un número del 1 al 10.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="card mb-3">
+                    <div class="card-header" data-bs-toggle="collapse" href="#profesorQ10" aria-expanded="false" aria-controls="profesorQ10" style="background-color: #008080; color: white;">
+                        <h5 class="mb-0">
+                            <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo invalidar una pregunta de un cuestionario con intentos realizados?
+                        </h5>
+                    </div>
+                    <div id="profesorQ10" class="collapse" data-bs-parent="#faqProfesoresContent" role="tabpanel">
+                        <div class="card-body" style="color: #004c4c;">
+                            <strong>1.</strong> Habilitar "Modo edición".<br>
+                            <strong>2.</strong> Accede al cuestionario.<br>
+                            <strong>3.</strong> Haz clic en el enlace del cuestionario que deseas editar.<br>
+                            <strong>4.</strong> Una vez en el cuestionario, haz clic en "Editar configuración".<br>
+                            <strong>5.</strong> Desplázate hasta la sección de preguntas y busca la pregunta específica que deseas invalidar.<br>
+                            <strong>6.</strong> Deberías ver opciones relacionadas con la pregunta seleccionada. Busca una opción como "Invalidar" o "Desactivar" para esa pregunta.<br>
+                            <strong>7.</strong> Guardar cambios.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Selecciona la cabecera de la sección Profesores
+        const profesoresHeader = document.querySelector('#faqProfesores');
+        const profesoresContent = document.querySelector('#faqProfesoresContent');
+
+        // Añade el evento click
+        profesoresHeader.addEventListener('click', function() {
+            if (profesoresContent.classList.contains('show')) {
+                profesoresContent.classList.remove('show'); // Cierra la sección si está abierta
+            } else {
+                profesoresContent.classList.add('show'); // Abre la sección si está cerrada
+            }
+        });
+    });
+</script>
+
             <hr>
             <h1>  </h1>
             <!--//FAQESTUDIANTES-->
-            <div class="card">
-                <div class="card" role="tab" id="faqEstudiantes">
-                  <div class="card-header" data-toggle="collapse" data-parent="#faq" href="#faqEstudiantesContent" aria-expanded="true" aria-controls="faqEstudiantesContent">
-                      <h5 class="card-title">
-                        <!--//ICONOESTUDIANTES--> 
-                          <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__est_v1.png" alt="Desc de la imagen">
-                          <a class="ar">
-                              Estudiantes
-                          </a>
-                      </h5>
-                  </div>
-                </div>
-                <div id="faqEstudiantesContent" class="collapse" role="tabcard" aria-labelledby="faqEstudiantes">
-                  <div class="espacio">
-                    <div class="item">
-                      <h5 class="faq-q mb-2">
-                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?</h5>
-                      <div class="faq-a">
-                          <p>Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Aula virtual pregrado”.</strong> </p>
-                      </div>
-                    </div><!--//item-->
-                    </div>
-                    <div class="espacio">
-                      <div class="item">
-                        <h5 class="faq-q mb-2">
-                          <i class="icon fa fa-question-circle text-primary"></i>
-                          ¿Cómo ver y ordenar mis cursos?
-                        </h5>
-                        <div class="faq-a">
-                          <p>Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
-                            - Todos (Cursos Periodo Actual y pasados).
-                            - Curso periodo actual.
-                            - Cursos pasados.
-                            - Destacados.
-                            - Eliminados de la vista.
-                          </p>
-                        </div>
-                      </div><!--//item-->
-                    </div>
-                    <div class="espacio">
-                      <div class="item">
-                        <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                          ¿Cómo modifico mi perfil?  </h5>
-                        <div class="faq-a">
-                            <p>Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc. 
-  
-                            </p>
-                        </div>
-                      </div><!--//item-->
-                      </div>
-                  <div class="espacio">
-                    <div class="item">
-                      <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                        ¿Cómo subir un archivo de tarea al aula virtual?   </h5>
-                      <div class="faq-a">
-                          <p>Primero debes encontrar la tarea dentro el curso en el Aula Virtual. Una vez hayas encontrado la tarea lee las instrucciones antes de subir tu archivo, asegúrate de leer todas las instrucciones proporcionadas por el profesor. Algunas tareas pueden tener requisitos específicos. Accede a la tarea dentro del curso y haga clic en <strong><em>"Enviar"</em></strong>.
-                          </p>
-                      </div>
-                    </div><!--//item-->
-                    </div>
-                    <div class="espacio">
-                      <div class="item">
-                        <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                          ¿Cómo ponerme en contacto con el académico del curso?  </h5>
-                        <div class="faq-a">
-                            <p>Puedes buscar la información de contacto del profesor en la sección de participantes o en la página principal del curso. Tambien tienes la posibilidad de enviar un mensaje a través de la plataforma o usar el correo proporcionado. </p>
-                        </div>
-                      </div><!--//item-->
-                      </div>
-                      <div class="espacio">
-                        <div class="item">
-                          <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                            ¿Qué precauciones debo tomar para rendir una evaluación tipo cuestionario?  </h5>
-                          <div class="faq-a">
-                              <p>
-                                Al momento de rendir un cuestionario debo tomar la precaución de abrir solo una vez el cuestionario en pestaña, además es importante tener una conexión estable a internet. 
-                            <span id="infoExamenBtn" class="text-link">Información sobre precauciones</span>
-                            <div id="infoExamenModal" class="modal">
-                              <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h5 class="modal-title">Precauciones para realizar un examen en el Aula Virtual</h5>
-                                          <button class ="botoncito2" type="button"  id="cerrarModalBtn" aria-label="Cerrar">
-                                              <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <div class="modal-body">
-                                          <!--//PRECACUCIONESPARAEXAMEN--> 
-                                          <img src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/v2_consideraciones_cuestionario.jpg" alt="Desc de la imagen">
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>                                                          
-                              </p>
-                          </div>
-                        </div><!--//item-->
-                        </div>
-                        <div class="espacio">
-                          <div class="item">
-                            <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                              ¿Puedo revisar mis respuestas después de completar un cuestionario?   </h5>
-                            <div class="faq-a">
-                                <p>
-                                  Depende de la configuración del cuestionario. Algunos permiten la revisión después de completar, mientras que otros no. Consulta las instrucciones específicas del cuestionario a tu profesor.  </p>
-                            </div>
-                          </div>
-                          </div>
-                        <div class="espacio">
-                          <div class="item">
-                            <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                              ¿Qué pasa si tengo un problema que no puedo resolver?    </h5>
-                            <div class="faq-a">
-                                <p>
-                                  Cuando ocurre un problema que no puede resolver usted ni su académico, debe enviar una evidencia (captura de pantalla, video, etc) al correo<strong> aula.virtual@uv.cl</strong> indicando su nombre completo, rut y curso en donde presenta el inconveniente.   </p>
-                            </div>
-                          </div>
-                          </div>
-                          <div class="espacio">
-                            <div class="item">
-                              <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                                ¿Qué debo hacer si tengo problemas técnicos durante una prueba en línea?   </h5>
-                              <div class="faq-a">
-                                  <p>
-                                    Informa al profesor de inmediato y busca ayuda técnica. Ten un plan de respaldo en caso de problemas técnicos para poder continuar con la evaluación.   </p>
-                              </div>
-                            </div>
-                            </div>
-                          <div class="espacio">
-                            <div class="item">
-                              <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                                ¿Qué hago si no puedo ver las asignaturas inscritas en el Aula Virtual?  </h5>
-                              <div class="faq-a">
-                                  <p>
-                                    <strong>1. </strong>Primero verifique que el curso no se encuentre en ninguno de los filtros del curso. 
+            <!-- Sección Estudiantes completa -->
+<div class="card">
+    <div class="card-header" role="tab" id="faqEstudiantes" style="background-color: #003b4d;">
+        <h5 class="card-title" style="color: white;">
+            <img class="iconos" src="https://aulavirtualpregrado.uv.cl/pluginfile.php/1/theme_boost_union/additionalresources/0/__est_v1.png" alt="Icono Estudiantes">
+            <a class="ar" style="color: white;">Estudiantes</a>
+        </h5>
+    </div>
 
-                                    <strong>2. </strong>Quizá aún no ha sido matriculado en el curso, de ser así espere unos días.  
-                                    
-                                    <strong>3. </strong>Si el problema persiste comuníquese con su académico.   </p>
-                              </div>
-                            </div>
-                            </div>    
-                              <div class="espacio">
-                                <div class="item">
-                                  <h5 class="faq-q mb-2"><i class="icon fa fa-question-circle text-primary"></i> 
-                                    ¿Qué debo hacer si tengo problemas para visualizar los contenidos del curso?  </h5>
-                                  <div class="faq-a">
-                                      <p>
-                                        Verifica la compatibilidad del navegador y, si es necesario, actualizalo. Si el problema persiste, debe enviar una evidencia (captura de pantalla, video, etc.) al correo
-                                        <strong> aula.virtual@uv.cl</strong> indicando su nombre completo, rut y curso en donde presenta el inconveniente.   </p>
-                                  </div>
-                                </div>
-                                </div>      
+    <div id="faqEstudiantesContent" class="collapse" role="tabpanel" aria-labelledby="faqEstudiantes">
+        <div class="card-body">
+            <!-- Pregunta 1 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ1" aria-expanded="false" aria-controls="estudianteQ1" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo acceder al Aula Virtual?
+                    </h5>
                 </div>
+                <div id="estudianteQ1" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Para ingresar al Aula Virtual se debe ingresar a través del Portal Académico <strong>“Portal UV”</strong> y luego hacer click en <strong>“Aula virtual pregrado”.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ2" aria-expanded="false" aria-controls="estudianteQ2" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo ver y ordenar mis cursos?
+                    </h5>
+                </div>
+                <div id="estudianteQ2" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Al visualizar los cursos en <strong><em>"Vista general de curso"</em></strong> se pueden encontrar cinco filtros disponibles para distintas visualizaciones:
+                        <ul>
+                            <li>Todos (Cursos Periodo Actual y pasados).</li>
+                            <li>Curso periodo actual.</li>
+                            <li>Cursos pasados.</li>
+                            <li>Destacados.</li>
+                            <li>Eliminados de la vista.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ3" aria-expanded="false" aria-controls="estudianteQ3" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo modifico mi perfil?
+                    </h5>
+                </div>
+                <div id="estudianteQ3" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Se puede acceder al Perfil personal y a las Preferencias desde el menú de usuario. Se debe ir a la sección de arriba a la derecha en donde se ve un icono, luego podrás editar tu información personal, foto, etc.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ4" aria-expanded="false" aria-controls="estudianteQ4" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo subir un archivo de tarea al aula virtual?
+                    </h5>
+                </div>
+                <div id="estudianteQ4" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Primero debes encontrar la tarea dentro del curso en el Aula Virtual. Una vez hayas encontrado la tarea, lee las instrucciones antes de subir tu archivo. Asegúrate de leer todas las instrucciones proporcionadas por el profesor. Accede a la tarea dentro del curso y haz clic en <strong><em>"Enviar"</em></strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ5" aria-expanded="false" aria-controls="estudianteQ5" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Cómo ponerme en contacto con el académico del curso?
+                    </h5>
+                </div>
+                <div id="estudianteQ5" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Puedes buscar la información de contacto del profesor en la sección de participantes o en la página principal del curso. También tienes la posibilidad de enviar un mensaje a través de la plataforma o usar el correo proporcionado.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ6" aria-expanded="false" aria-controls="estudianteQ6" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Qué precauciones debo tomar para rendir una evaluación tipo cuestionario?
+                    </h5>
+                </div>
+                <div id="estudianteQ6" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Al momento de rendir un cuestionario debo tomar la precaución de abrir solo una vez el cuestionario en una pestaña, además es importante tener una conexión estable a internet. 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ7" aria-expanded="false" aria-controls="estudianteQ7" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Puedo revisar mis respuestas después de completar un cuestionario?
+                    </h5>
+                </div>
+                <div id="estudianteQ7" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Depende de la configuración del cuestionario. Algunos permiten la revisión después de completar, mientras que otros no. Consulta las instrucciones específicas del cuestionario o a tu profesor.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ8" aria-expanded="false" aria-controls="estudianteQ8" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Qué pasa si tengo un problema que no puedo resolver?
+                    </h5>
+                </div>
+                <div id="estudianteQ8" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Cuando ocurre un problema que no puedes resolver tú ni tu académico, debes enviar una evidencia (captura de pantalla, video, etc.) al correo <strong>aula.virtual@uv.cl</strong> indicando tu nombre completo, RUT y curso en donde presentas el inconveniente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ9" aria-expanded="false" aria-controls="estudianteQ9" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Qué debo hacer si tengo problemas técnicos durante una prueba en línea?
+                    </h5>
+                </div>
+                <div id="estudianteQ9" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        Informa al profesor de inmediato y busca ayuda técnica. Ten un plan de respaldo en caso de problemas técnicos para poder continuar con la evaluación.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="card mb-3">
+                <div class="card-header" data-bs-toggle="collapse" href="#estudianteQ10" aria-expanded="false" aria-controls="estudianteQ10" style="background-color: #008080; color: white;">
+                    <h5 class="mb-0">
+                        <i class="icon fa fa-question-circle text-primary"></i> ¿Qué hago si no puedo ver las asignaturas inscritas en el Aula Virtual?
+                    </h5>
+                </div>
+                <div id="estudianteQ10" class="collapse" data-bs-parent="#faqEstudiantesContent" role="tabpanel">
+                    <div class="card-body" style="color: #004c4c;">
+                        <strong>1.</strong> Primero verifica que el curso no se encuentre en ninguno de los filtros del curso.<br>
+                        <strong>2.</strong> Quizá aún no has sido matriculado en el curso, de ser así espera unos días.<br>
+                        <strong>3.</strong> Si el problema persiste, comunícate con tu académico.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Selecciona la cabecera de la sección Estudiantes
+        const estudiantesHeader = document.querySelector('#faqEstudiantes');
+        const estudiantesContent = document.querySelector('#faqEstudiantesContent');
+
+        // Añade el evento click
+        estudiantesHeader.addEventListener('click', function() {
+            if (estudiantesContent.classList.contains('show')) {
+                estudiantesContent.classList.remove('show'); // Cierra la sección si está abierta
+            } else {
+                estudiantesContent.classList.add('show'); // Abre la sección si está cerrada
+            }
+        });
+    });
+</script>
+
+
               </div><!--//TERMINAESTUDIANTES-->
               <hr>
               <!--//FAQVIDEOTUTORIALES-->
@@ -1249,6 +1244,37 @@ cerrarModalBtn6.addEventListener("click", function() {
           }); 
       });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections = [
+            { header: '#faqProfesores', content: '#faqProfesoresContent' },
+            { header: '#faqEstudiantes', content: '#faqEstudiantesContent' },
+            { header: '#faqEstudiantesContents', content: '#faqEstudiantesContents' }
+        ];
+
+        sections.forEach(section => {
+            const header = document.querySelector(section.header);
+            const content = document.querySelector(section.content);
+
+            header.addEventListener('click', function() {
+                // Toggle the clicked section
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                } else {
+                    content.classList.add('show');
+                }
+
+                // Close all other sections
+                sections.forEach(otherSection => {
+                    if (otherSection.content !== section.content) {
+                        document.querySelector(otherSection.content).classList.remove('show');
+                    }
+                });
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
